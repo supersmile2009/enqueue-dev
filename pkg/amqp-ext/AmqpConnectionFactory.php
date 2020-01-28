@@ -88,6 +88,7 @@ class AmqpConnectionFactory implements InteropAmqpConnectionFactory, DelayStrate
             $extConfig['write_timeout'] = $this->config->getWriteTimeout();
             $extConfig['connect_timeout'] = $this->config->getConnectionTimeout();
             $extConfig['heartbeat'] = $this->config->getHeartbeat();
+            $extConfig['connection_name'] = $this->config->getConnectionName();
 
             if ($this->config->isSslOn()) {
                 $extConfig['verify'] = $this->config->isSslVerify();
